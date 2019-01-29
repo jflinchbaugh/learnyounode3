@@ -13,7 +13,7 @@ let print = function(lst) {
 
 let done = (lst =>
     [0, 1, 2].every(it =>
-        typeof lst[it] !== 'undefined'
+        lst[it] !== undefined
     )
 )
 
