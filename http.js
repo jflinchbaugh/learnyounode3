@@ -1,4 +1,4 @@
-let http = require('http')
+const http = require('http')
 
 http.get(
     process.argv[2],

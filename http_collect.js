@@ -1,5 +1,5 @@
-let http = require('http')
-let concatStream = require('concat-stream')
+const http = require('http')
+const concatStream = require('concat-stream')
 
 http.get(
     process.argv[2],

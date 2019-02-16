@@ -1,12 +1,12 @@
-let http = require('http')
-let fs = require('fs')
+const http = require('http')
+const fs = require('fs')
 
-let port = process.argv[2]
-let path = process.argv[3]
+const port = process.argv[2]
+const path = process.argv[3]
 
-let stream = fs.createReadStream(path)
+const stream = fs.createReadStream(path)
 
-let server = http.createServer(
+const server = http.createServer(
     (request, response) => {
         stream.pipe(response)
     }

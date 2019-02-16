@@ -1,24 +1,24 @@
-let http = require('http')
-let concatStream = require('concat-stream')
+const http = require('http')
+const concatStream = require('concat-stream')
 
-let urls = [2, 3, 4].map(it => process.argv[it])
+const urls = [2, 3, 4].map(it => process.argv[it])
 
-let results = []
+const results = []
 
-let print = function(lst) {
+const print = function(lst) {
     results.forEach(it =>
         console.log(it)
     )
 }
 
-let done = (lst =>
+const done = (lst =>
     [0, 1, 2].every(it =>
         lst[it] !== undefined
     )
 )
 
 for (idx in [0, 1, 2]) {
-    let i = idx
+    const i = idx
     http.get(
         urls[i],
         response => {

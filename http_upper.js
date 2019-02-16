@@ -1,9 +1,9 @@
-let http = require('http')
-let map = require('through2-map')
+const http = require('http')
+const map = require('through2-map')
 
-let port = process.argv[2]
+const port = process.argv[2]
 
-let server = http.createServer(
+const server = http.createServer(
     (request, response) => {
         request.pipe(
             map(chunk =>

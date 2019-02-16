@@ -1,4 +1,4 @@
-let ffs = require('./ffs')
+const ffs = require('./ffs')
 
 ffs(
     process.argv[2],
